@@ -2,9 +2,51 @@
 
   # TYPOGRAPHY
     # BODY
+    # LINKS
+    # HEADINGS
+  # STRUCTURE
+    # HEADER
+    # FOOTER
+    # NAV
 
 */
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 87.5%; /* 14px */
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1000px;
+}
+
+a {
+  color: rgba(0, 51, 102, 0.8);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 51, 102, 1);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.site-header,
+.site-footer {
+  text-align: center;
+}
+
+.site-navigation ul {
+  padding: 0;
+}
+
+.site-navigation ul li {
+  display: inline-block;
+}
+
+.site-navigation ul li a {
+  display: block;
+  padding: 1em;
 }
