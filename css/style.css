@@ -2,6 +2,7 @@
 
   # TYPOGRAPHY
     # BODY
+    # PARAGRAPH
     # LINKS
     # HEADINGS
   # STRUCTURE
@@ -20,6 +21,10 @@ body {
   max-width: 1000px;
 }
 
+p {
+  max-width: 35em;
+}
+
 a {
   color: rgba(0, 51, 102, 0.8);
   text-decoration: none;
@@ -32,6 +37,13 @@ a:hover {
 h1 {
   font-size: 3em;
 }
+
+/* HELPER CLASSES */
+.text-centered {
+  text-align: center;
+}
+
+/* STRUCTURE */
 
 .site-header,
 .site-footer {
@@ -49,4 +61,31 @@ h1 {
 .site-navigation ul li a {
   display: block;
   padding: 1em;
+}
+
+/* MEDIA */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* THUMBGRID */
+
+.thumbgrid {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thumbgrid li {
+  list-style: none;
+  width: 49.5%;
+  padding-bottom: 0.4%;
+}
+
+@media (min-width: 768px) {
+  .thumbgrid li {
+    width: 24.5%;
+  }
 }
