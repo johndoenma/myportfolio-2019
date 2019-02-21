@@ -39,6 +39,8 @@ h1 {
   font-size: 3em;
 }
 
+
+
 /* HELPER CLASSES */
 .text-centered {
   text-align: center;
@@ -65,7 +67,7 @@ h1 {
   letter-spacing: 0.1em;
   padding: 1em;
   display: inline-block;
-  transition: .2s ease-out all;
+  /* transition: .2s ease-out all; */
 }
 
 .site-header h1 a:hover {
@@ -89,7 +91,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
-  transition: .2s ease-out all;
+  /* transition: .2s ease-out all; */
 }
 
 .site-navigation ul li a:hover {
@@ -121,7 +123,7 @@ img {
   list-style: none;
   width: 49%;
   margin-bottom: 0.8%;
-  transition: 0.4s ease-out all;
+  /* transition: 0.4s ease-out all; */
   overflow: hidden;
 }
 
@@ -136,6 +138,7 @@ img {
   transition: 0.2s ease-out all;
   width: 100%;
   margin: 0;
+  position: relative;
 }
 
 .thumbgrid li a:hover  {
@@ -163,50 +166,99 @@ img {
   display: block;
 }
 
-
-/* @Keyframe Animations */
-
-@keyframes fade-in-and-down {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* BUTTONS */
+.button {
+  display: inline-block;
+  border-radius: 2em;
+  padding: 1em 2em;
+  margin: 1em;
+  border: 1px solid rgba(0, 51, 102, 1);
+  color:  rgba(0, 51, 102, 1);
+  /* transition: all .4s ease-out; */
 }
 
-.fade-in-and-down * {
-  animation-name: fade-in-and-down;
-  animation-duration: 0.4s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
+.button:hover {
+  background: rgba(0, 51, 102, 1);
+  color:  rgba(255, 255, 255, 1);
+}
+
+/* SECTIONS */
+
+.hero {
+  padding: 6em 1em;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 13em;
+  margin: 0 auto 1em auto;
+}
+
+.hero p {
+  margin: 0 auto 1em auto;
+}
+
+/* ANIMATIONS */
+
+.hero, .hero * {
+  animation-name: myheroanimation;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
-.fade-in-and-down *:nth-child(1) {
-  animation-delay: 0.2s;
+.hero h1 { animation-delay: 0; }
+.hero p { animation-delay: .25s; }
+.hero a { animation-delay: .5s; }
+
+@keyframes myheroanimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} 
+
+.page-home .site-header {
+  animation-name: myheaderanimation;
+  animation-duration: 1s;
+  animation-delay: .75s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
-.fade-in-and-down *:nth-child(2) {
-  animation-delay: 0.4s;
+
+@keyframes myheaderanimation {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1;}
 }
-.fade-in-and-down *:nth-child(3) {
-  animation-delay: 0.6s;
+
+.page-home .site-footer {
+  animation-name: myfooteranimation;
+  animation-duration: 1s;
+  animation-delay: 1.25s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
-.fade-in-and-down *:nth-child(4) {
-  animation-delay: 0.8s;
+
+@keyframes myfooteranimation {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1;}
 }
-.fade-in-and-down *:nth-child(5) {
-  animation-delay: 1s;
+
+.page-work .thumbgrid li {
+  animation-name: mythumbgridgrow;
+  animation-duration: 1s;
+  animation-delay: 0;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
-.fade-in-and-down *:nth-child(6) {
-  animation-delay: 1.2s;
-}
-.fade-in-and-down *:nth-child(7) {
-  animation-delay: 1.4s;
-}
-.fade-in-and-down *:nth-child(8) {
-  animation-delay: 1.6s;
+.page-work .thumbgrid li:nth-child(1) { animation-delay: 0; }
+.page-work .thumbgrid li:nth-child(2) { animation-delay: .2s; }
+.page-work .thumbgrid li:nth-child(3) { animation-delay: .4s; }
+.page-work .thumbgrid li:nth-child(4) { animation-delay: .6s; }
+.page-work .thumbgrid li:nth-child(5) { animation-delay: .8s; }
+.page-work .thumbgrid li:nth-child(6) { animation-delay: 1s; }
+.page-work .thumbgrid li:nth-child(7) { animation-delay: 1.2s; }
+.page-work .thumbgrid li:nth-child(8) { animation-delay: 1.4s; }
+
+@keyframes mythumbgridgrow {
+  0% { transform: translateX(-20px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1;}
 }
