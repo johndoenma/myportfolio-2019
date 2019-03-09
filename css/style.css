@@ -190,7 +190,7 @@ img {
 /* SECTIONS */
 
 .hero {
-  padding: 6em 1em;
+  padding: 10% 1em;
   text-align: center;
 }
 
@@ -316,7 +316,7 @@ img {
 /* PROJECT DETAIL PAGES */
 
 section {
-  padding: 5em 2em;
+  padding: 10% 2em;
 }
 
 .dark {
@@ -339,7 +339,7 @@ section {
 }
 
 .headline {
-  font-size: 3.5em;
+  font-size: 3em;
 }
 
 .subheadline {
